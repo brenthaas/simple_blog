@@ -1,0 +1,11 @@
+.blog-form
+  - simple_form_for(@blog) do |f|
+    = f.error_notification
+
+    .form-inputs
+      = f.input :title, class: 'title_input'
+      = f.input :posting_date, label: "Date"
+      = f.input :content, as: :text, class: 'content_text'
+
+    .form-actions
+      = f.button :submit
