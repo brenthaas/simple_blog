@@ -1,0 +1,85 @@
+$postGray: #999;
+$fieldSize: 60%;
+
+// ---- new post form ----
+.post-form {
+  .form-inputs {
+    margin: 0 auto;
+  }
+  #post_title {
+    width: $fieldSize;
+  }
+  #post_content {
+    width: $fieldSize;
+  }
+}
+
+// ---- index post display ----
+#posts {
+  width: 850px;
+  margin: 50px auto;
+
+  .pagination a {
+    color: #BBB;
+  }
+
+  #post_list_header {
+    background-color: #000;
+    background-image: url("/assets/header_CatBaIsland_panorama.jpg");
+    background-repeat: no-repeat;
+    width: 850px;
+    height: 170px;
+    margin: 20px auto;
+  }
+  .new_post_link {
+    float: right;
+    margin-right: 10px;
+  }
+  #post_list {
+    width: 100%;
+    clear: both;
+  }
+}
+.post_post {
+  margin: 15px 10px;
+
+  .post_title {
+    color: $postGray;
+    font-size: 18px;
+    font-weight: bold;
+    line-height: 24px;
+
+    .post_date {
+      font-size: 16px;
+      font-style: italic;
+      font-weight: normal;
+      float: right;
+    }
+  }
+  p {
+    margin: 10px 0;
+  }
+  .image_in_post {
+    display: block;
+    text-align: center;
+
+    .image_caption {
+      display: block;
+      text-align: center;
+      font-size: 12px;
+    }
+  }
+
+  a {
+    color: $postGray;
+    text-decoration: none;
+  }
+  a:hover {
+    border-bottom: 1px dotted $postGray;
+    color: black;
+  }
+}
+
+.post_summary {
+  margin: 5px 10px;
+}
