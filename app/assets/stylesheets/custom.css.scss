@@ -1,0 +1,134 @@
+
+@media print {.navbar { display: none; } }
+
+/* mixins, variables, etc. */
+$headerGray: #333;
+$gray: #aaaaaa;
+$grayMediumLight: #eaeaea;
+$grayLight: #eeeeee;
+$grayDarker: #999999;
+
+/* make sure boxes come up with a border */
+@mixin box_sizing {
+-moz-box-sizing: border-box;
+-webkit-box-sizing: border-box;
+box-sizing: border-box;
+}
+
+.alert {
+  @include box_sizing;
+  text-align: center;
+}
+
+/* universal */
+html {
+  overflow-y: scroll;
+}
+
+* { margin: 0; padding: 0; }
+
+body {
+  font: 1em Georgia, serif;
+}
+#page_body {
+  width: 850px;
+  margin: 20px 40px;
+  padding-top: 40px;
+
+}
+section {
+  overflow: auto;
+}
+textarea {
+  resize: vertical;
+}
+.center {
+  text-align: center;
+  h1 {
+    margin-bottom: 10px;
+  }
+}
+
+/* header */
+#logo {
+  float: left;
+  margin-right: 10px;
+  font-size: 2em;
+  color: $headerGray;
+  text-transform: uppercase;
+  letter-spacing: -1px;
+  padding-top: 9px;
+  font-weight: bold;
+  line-height: 1;
+  background: -webkit-linear-gradient(#eee, #333);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+#logo:hover {
+  color: #fff;
+  text-decoration: none;
+}
+
+.navbar {
+  .nav li a {
+   font-size: 1.6em;
+   color: $headerGray;
+  }
+}
+
+/* typography */
+h1, h2, h3, h4, h5, h6 {
+  line-height: 1em;
+}
+h1 {
+  font-size: 3em;
+  letter-spacing: -2px;
+  margin-bottom: 30px;
+  text-align: center;
+}
+h2 {
+  font-size: 1.7em;
+  letter-spacing: -1px;
+  margin-bottom: 30px;
+  text-align: center;
+  font-weight: normal;
+  color: $grayLight;
+}
+p#notice {
+  font-size: 1.1em;
+  line-height: 1.7em;
+}
+
+/* footer */
+footer {
+  margin-top: 45px;
+  padding-top: 5px;
+  border-top: 1px solid $grayMediumLight;
+  color: $grayLight;
+  a {
+    color: $gray;
+    &:hover {
+      color: $grayDarker;
+    }
+  }
+  small {
+    float: left;
+  }
+  ul {
+    float: right;
+    list-style: none;
+    li {
+      float: left;
+      margin-left: 10px;
+    }
+  }
+}
+
+/* special displays */
+.debug_dump {
+  clear: both;
+  float: left;
+  width: 100%;
+  margin-top: 45px;
+  @include box_sizing;
+}

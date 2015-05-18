@@ -1,12 +1,12 @@
-header.navbar.navbar-fixed-top
+header.navbar.navbar-default
   .navbar-inner
     .container-fluid
-      = link_to "Low-Key Travels"
-        ul.nav.pull-right
+      = link_to "Low-Key Travels", {}, id: 'logo'
+      ul.nav.navbar-nav.navbar-right
+        li
+          = link_to "Blog", posts_url
+        li
+          = link_to "About me", about_path
+        - if user_signed_in?
           li
-            = link_to "Blog", posts_url
-          li
-            = link_to "About me", about_path
-          - if user_signed_in?
-            li
-              = link_to "Log Out", destroy_user_session_path
+            = link_to "Log Out", destroy_user_session_path
