@@ -1,14 +1,12 @@
 header.navbar.navbar-fixed-top
   .navbar-inner
-    container-fluid
-      = link_to "Low-Key Travels", blogs_path, id: 'logo'
+    .container-fluid
+      = link_to "Low-Key Travels"
         ul.nav.pull-right
           li
-            = link_to "Blog", blogs_path
-          li
-            = link_to "Dev Notes", notes_path
+            = link_to "Blog", posts_url
           li
             = link_to "About me", about_path
-          - if logged_in?
+          - if user_signed_in?
             li
-              = link_to "Log Out", logout_path, method: :delete
+              = link_to "Log Out", destroy_user_session_path

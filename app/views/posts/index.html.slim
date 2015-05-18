@@ -1,10 +1,10 @@
-#blogs
-  #blog_list_header
-  #select_page.center
+#posts
+  #post-list-header
+  #select-page.center
 
   = link_to 'New Post', new_post_path, class: 'new_post_link' if user_signed_in?
-  #blog_list
+  #post-list
     - @posts.each do |post|
       = render posts
-  #blog_list_footer.center
+  #post-list-footer.center
 
