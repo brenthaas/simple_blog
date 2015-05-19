@@ -3,9 +3,10 @@
     .form-errors
 
     .form-inputs
-      = f.text_field :title, class: 'title_input'
+      = f.text_field :title, class: 'post-title'
       = f.date_select :posted_at, label: "Date"
-      = f.text_area :content, as: :text, class: 'content_text'
+      = f.text_area :content, as: :text, class: 'post-content'
 
     .form-actions
-      = f.button :submit
+      = f.button :submit, class: "button btn btn-success"
+      = link_to 'Back', posts_path, class: "back-button btn btn-danger pull-right"

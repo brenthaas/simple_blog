@@ -1,17 +1,8 @@
 $postGray: #999;
-$fieldSize: 60%;
 
-// ---- new post form ----
-.post-form {
-  .form-inputs {
-    margin: 0 auto;
-  }
-  #post-title {
-    width: $fieldSize;
-  }
-  #post-content {
-    width: $fieldSize;
-  }
+.new-post-page {
+  margin: 10px auto;
+  width: 50%;
 }
 
 // ---- index post display ----

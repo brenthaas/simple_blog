@@ -1,3 +1,24 @@
+$fieldSize: 60%;
+
+// ---- new post form ----
+.post-form {
+  .form-inputs {
+    margin: 0 auto;
+  }
+  .post-title {
+    width: $fieldSize;
+  }
+  .post-content {
+    width: $fieldSize;
+    height: 200px;
+  }
+
+  .back-button {
+    margin-right: 120px;
+  }
+}
+
+
 /* Borrowed from railscasts */
 form {
   $indent: 120px;

@@ -27,9 +27,6 @@ html {
 
 * { margin: 0; padding: 0; }
 
-body {
-  font: 1em Georgia, serif;
-}
 #page_body {
   width: 850px;
   margin: 20px 40px;
@@ -53,7 +50,7 @@ textarea {
 #logo {
   float: left;
   margin-right: 10px;
-  font-size: 2em;
+  font: 2em Georgia, serif;;
   color: $headerGray;
   text-transform: uppercase;
   letter-spacing: -1px;
@@ -71,7 +68,7 @@ textarea {
 
 .navbar {
   .nav li a {
-   font-size: 1.6em;
+   font: 1.3em Georgia, serif;
    color: $headerGray;
   }
 }
