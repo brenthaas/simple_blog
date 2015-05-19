@@ -1,0 +1,8 @@
+.post
+  .post-title
+    = link_to post.title, post
+    span.post-date
+      = post.posted_at.strftime("%B %d, %Y")
+  p.post-content
+    =raw post.content
+= render 'options', post: post if user_signed_in?

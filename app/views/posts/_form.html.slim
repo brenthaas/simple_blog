@@ -4,7 +4,7 @@
 
     .form-inputs
       = f.text_field :title, class: 'post-title'
-      = f.date_select :posted_at, label: "Date"
+      = f.datetime_field :posted_at, label: "Date", class: 'post-date', value: @post.posted_at.getlocal.strftime("%Y-%m-%d %H:%M %z")
       = f.text_area :content, as: :text, class: 'post-content'
 
     .form-actions

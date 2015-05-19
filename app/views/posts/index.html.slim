@@ -5,6 +5,6 @@
   = link_to 'New Post', new_post_path, class: 'new_post_link' if user_signed_in?
   #post-list
     - @posts.each do |post|
-      = render posts
+      = render post
   #post-list-footer.center
 
